@@ -19,8 +19,8 @@ const geistMono = localFont({
 
 // Metadata configuration
 export const metadata: Metadata = {
-  title: "Madhurima-The Music Society of DTU",
-  description: "A Website all about DTU's home of eccentric musicians",
+  title: "Kalakriti - The Fine Arts Society of DTU",
+  description: "A Website all about DTU's home of eccentric artists",
 };
 
 export default function RootLayout({
@@ -37,13 +37,6 @@ export default function RootLayout({
           href="/img/Madhurima-Favicon.png"
           type="image/png"
         />
-
-        {/* Page Title */}
-        <title>{String(metadata.title)}</title>
-
-
-        {/* Meta Description */}
-        <meta name="description" content={metadata.description || ""} />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

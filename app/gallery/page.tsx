@@ -8,22 +8,22 @@ function FocusCardsBanner() {
     {
       title: "Winner 1",
       src: "/img/aboutcover1.png",
-      description: "Guitarist",
+      description: "Painter",
     },
     {
       title: "Winner 2",
       src: "/img/aboutcover2.png",
-      description: "Guitarist",
+      description: "Sculptor",
     },
     {
       title: "Winner 3",
       src: "/img/focuscard4.webp",
-      description: "Guitarist",
+      description: "Digital Artist",
     },
     {
       title: "Winner 4",
       src: "/img/focuscard2.webp",
-      description: "Guitarist",
+      description: "Illustrator",
     },
     {
       title: "Winner 5",
@@ -33,7 +33,7 @@ function FocusCardsBanner() {
     {
       title: "Winner 6",
       src: "/img/focuscard1.webp",
-      description: "Guitarist",
+      description: "Mixed Media Artist",
     },
   ];
 
@@ -46,7 +46,7 @@ const page = () => {
       <WavyBackgroundHero />
       <div className="pt-3 pb-3 mt-5 mb-5 ">
         <AnimatedTitle
-          title="Our Wins"
+          title="Our Masterpieces"
           containerClass="mt-5 pointer-events-none mix-blend-difference relative z-10 hover:text-violet-600"
         />
       </div>

@@ -14,7 +14,7 @@ export default function ImagesSliderDemo() {
     '/img/aboutcover5.png',
   ];
 
-  const band = ['Duality', 'Dhoomketu', 'Darya', 'Acapella', 'Choir'];
+  const wing = ['Chiaroscuro', 'Impressions', 'Sculpta', 'Canvas', 'Spectrum'];
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -32,7 +32,7 @@ export default function ImagesSliderDemo() {
 
   const handleLearnMoreClick = () => {
 
-    const targetUrl = `/about/${band[currentSlide].toLowerCase()}`;
+    const targetUrl = `/about/${wing[currentSlide].toLowerCase()}`;
     window.open(targetUrl, '_blank');
   };
   
@@ -53,15 +53,16 @@ export default function ImagesSliderDemo() {
         transition={{ duration: 0.6 }}
         className="absolute inset-0 flex flex-col justify-center items-center z-50"
       >
+        <div className='pb-2 font-general text-sm uppercase md:text-[10px] text-white'>Meet The Wings</div>
         <motion.p
           className="font-bold text-2xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4 transform transition-transform duration-300 hover:scale-110"
         >
-          {band[currentSlide]}
+          {wing[currentSlide]}
         </motion.p>
         <div className="relative mt-4">
           <Button
             id={`Learn-More-${currentSlide}`}
-            title={`Learn More About ${band[currentSlide]}`}
+            title={`Learn More About ${wing[currentSlide]}`}
             rightIcon={<TiLocationArrow />}
             containerClass="bg-blue-50 md:flex items-center justify-center gap-1 px-4 py-2 rounded-full hover:bg-yellow-400 hover:text-white transition duration-300"
             onClick={handleLearnMoreClick}

@@ -48,8 +48,8 @@ export default function TimelineEvent() {
       title: "Early 2023",
       content: (
         <div>
-          <p className="text-violet-50 dark:text-neutral-200 text-xs md:text-sm font-generall mb-8">
-            I have no clue what these lads were doing then lmfao
+          <p className="text-violet-50 dark:text-neutral-200 text-xs md:text-sm font-general mb-8">
+            Built the first fine arts portfolio for the new year. Organised sketching and live painting sessions that redefined how we approach creativity.
           </p>
           <p className="text-violet-50 dark:text-neutral-200 text-xs md:text-sm font-general mb-8">
             Kanye West is good.

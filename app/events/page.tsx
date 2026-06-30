@@ -10,7 +10,7 @@ const Events = () => {
         <HeroParallaxEvent />
         <div className='relative size-full '>
           <AnimatedTitle 
-            title="Madhurima Events"
+            title="Kalakriti Events"
             
             containerClass="mt-5 pointer-events-none mix-blend-difference relative z-10"
           />

@@ -3,7 +3,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Button from './ui/Button';
 import { TiLocationArrow } from 'react-icons/ti';
-import { useRouter } from 'next/navigation';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 
@@ -18,6 +17,7 @@ const Hero: React.FC = () => {
   const totalVideos = 4;
 
   const nextVideoRef = useRef<HTMLVideoElement | null>(null);
+  const miniVideoRef = useRef<HTMLVideoElement | null>(null);
 
   const handleVideoLoad = () => {
     setLoadedVideos((prev) => prev + 1);
@@ -30,11 +30,20 @@ const Hero: React.FC = () => {
     setCurrentIndex(upcomingVideoIndex);
   };
 
+  // Dismiss loading when enough videos are ready, using >= to avoid overshoot
   useEffect(() => {
-    if (loadedVideos === totalVideos - 1) {
+    if (loadedVideos >= totalVideos - 1) {
       setIsLoading(false);
     }
   }, [loadedVideos]);
+
+  // Fallback timeout: dismiss loading after 5 seconds regardless of video state
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 5000);
+    return () => clearTimeout(timeout);
+  }, []);
 
   useEffect(() => {
     if (hasClicked) {
@@ -108,10 +117,12 @@ const Hero: React.FC = () => {
               className="origin-center scale-50 opacity-0 transition-all duration-500 ease-in hover:scale-100 hover:opacity-100"
             >
               <video
-                ref={nextVideoRef}
+                ref={miniVideoRef}
                 src={getVideoSrc(upcomingVideoIndex)}
                 loop
                 muted
+                playsInline
+                preload="metadata"
                 id="current-video"
                 className="size-64 origin-center scale-150 object-cover object-center"
                 onLoadedData={handleVideoLoad}
@@ -123,6 +134,8 @@ const Hero: React.FC = () => {
             src={getVideoSrc(currentIndex)}
             loop
             muted
+            playsInline
+            preload="metadata"
             id="next-video"
             className="absolute-center invisible absolute z-20 size-64 object-cover object-center"
             onLoadedData={handleVideoLoad}
@@ -133,22 +146,24 @@ const Hero: React.FC = () => {
             autoPlay
             loop
             muted
+            playsInline
+            preload="auto"
             className="absolute left-0 top-0 size-full object-cover object-center"
             onLoadedData={handleVideoLoad}
           />
         </div>
         <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-75">
-          M<b>u</b>sic
+          A<b>r</b>ts
         </h1>
         <div className="absolute left-0 top-0 z-40 size-full">
           <div className="mt-24 px-5 sm:px-10">
             <h1 className="special-font hero-heading text-blue-100">
-              The Teams
+              The Wings
             </h1>
             <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
-              Meet the Bands and Teams of
+              Meet the Teams and Wings of
               <br />
-              Madhurima
+              Kalakriti
             </p>
 
             <Button
@@ -161,7 +176,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
       <h1 className="special-font hero-heading absolute bottom-5 right-5 text-black">
-        m<b>u</b>sic
+        a<b>r</b>ts
       </h1>
     </div>
   );

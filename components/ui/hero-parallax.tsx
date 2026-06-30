@@ -108,8 +108,8 @@ export const Header = () => {
         Our <br /> Performances
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        We are singer so ofc we were singing , what else do u think we do and
-        gues where we perofrmed? lol take a wild guess? ye in college Events.
+        We are artists so of course we were painting, what else do you think we do and
+        we love it.s where we perofrmed? lol take a wild guess? ye in college Events.
       </p>
     </div>
   );

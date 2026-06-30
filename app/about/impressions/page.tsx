@@ -8,14 +8,14 @@ const page = () => {
   return (
     <>
     <div className="h-screen w-screen bg-black flex items-center justify-center overflow-hidden">
-      <TextHoverEffect text="Choir" />
+      <TextHoverEffect text="Impressions" />
     </div>
 
         <div className='relative mb-10 mt-10 flex flex-col items-center gap-5 '>
             <h2 className='pb-2 font-general text-sm uppercase md:text-[10px] text-black'>Meet</h2>
 
             <AnimatedTitle 
-                title='Choir'
+                title='Impressions'
                 containerClass='mt-5  !text-black text-center'
             />
         </div>

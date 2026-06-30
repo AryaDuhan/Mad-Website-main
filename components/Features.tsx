@@ -57,6 +57,7 @@ const BentoCard: React.FC<BentoCardProps> = ({ src, title, description }) => {
         loop
         muted
         autoPlay
+        playsInline
         className="absolute left-0 top-0 size-full object-cover object-center"
       />
       <div className="relative z-10 flex size-full flex-col justify-between p-5 text-blue-50">
@@ -77,17 +78,18 @@ const Features: React.FC = () => {
       <div className="container mx-auto px-3 md:px-10">
         <div className="px-5 py-32">
           <p className="font-circular-web text-lg text-blue-50 pt-10">
-            Immerse Yourself in Music
+            Immerse Yourself in Art
           </p>
           <p className="max-w-md font-circular-web text-lg text-blue-50 pb-10">
-            DoReMiPa is the official annual inter-college music competition of
-            Delhi Technological University (DTU) organized by Madhurima - the
-            music society of DTU, which is held under ENGIFEST- the largest
-            cultural fest of north India. DoReMiPa includes six musical
-            competitions that showcase a diverse array of musical styles,
-            encompassing Indian, Western, and Instrumental genres and draws
-            participation from all major colleges in the Delhi NCR as well as
-            other parts of India.
+            Rang Manch is the official annual inter-college fine arts
+            competition of Delhi Technological University (DTU) organized by
+            Kalakriti - the fine arts society of DTU, which is held under
+            ENGIFEST - the largest cultural fest of north India. Rang Manch
+            includes a variety of art competitions that showcase a diverse
+            array of creative styles, encompassing painting, sculpture,
+            sketching, digital art, and mixed media, drawing participation
+            from all major colleges in the Delhi NCR as well as other parts
+            of India.
           </p>
         </div>
 
@@ -140,6 +142,7 @@ const Features: React.FC = () => {
                 loop
                 muted
                 autoPlay
+                playsInline
                 className="size-full object-cover object-center"
               />
             </div>

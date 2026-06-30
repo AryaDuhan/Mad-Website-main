@@ -3,7 +3,7 @@ import DoremipaCard from '@/components/DoremipaCard';
 import DoremipaHero from '@/components/DoremipaHero';
 import AnimatedTitle from '@/components/AnimatedTitle';
 import DoremipaFeatures from '@/components/DoremipaFeatures';
-const Doremipa = () => {
+const RangManch = () => {
   return (
     <>
       <section className="w-full h-full bg-black">
@@ -90,4 +90,4 @@ const Doremipa = () => {
     
 }
 
-export default Doremipa
+export default RangManch

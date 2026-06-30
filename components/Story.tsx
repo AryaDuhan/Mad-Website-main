@@ -3,6 +3,7 @@ import React, { useRef, MouseEvent } from 'react';
 import AnimatedTitle from './AnimatedTitle';
 import Button from './ui/Button';
 import gsap from 'gsap';
+import Image from 'next/image';
 
 const Story: React.FC = () => {
   const frameRef = useRef<HTMLImageElement | null>(null);
@@ -54,14 +55,14 @@ const Story: React.FC = () => {
 
         <div className="relative size-full">
           <AnimatedTitle
-            title="Story of Madhurima Through its People."
+            title="Story of Kalakriti Through its People."
             containerClass="mt-5 pointer-events-none mix-blend-difference relative z-10"
           />
 
           <div className="story-img-container">
             <div className="story-img-mask">
               <div className="story-img-content">
-                <img
+                <Image
                   ref={frameRef}
                   onMouseLeave={handleMouseLeave}
                   onMouseUp={handleMouseLeave}
@@ -69,6 +70,8 @@ const Story: React.FC = () => {
                   onMouseMove={handleMouseMove}
                   src="/img/entrance.webp"
                   alt="entrance"
+                  width={800}
+                  height={600}
                   className="object-contain"
                 />
               </div>

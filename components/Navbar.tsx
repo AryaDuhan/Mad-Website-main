@@ -6,8 +6,9 @@ import { IoMdHome } from 'react-icons/io';
 import { useWindowScroll } from 'react-use';
 import gsap from 'gsap';
 import { useRouter } from 'next/navigation'; // Correct import
+import Image from 'next/image';
 
-const navItems = ['Do Re Mi Pa', 'Accolades',  'Events', 'About'];
+const navItems = ['Rang Manch', 'Gallery',  'Events', 'About'];
 
 const Navbar = () => {
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
@@ -69,7 +70,7 @@ const Navbar = () => {
       <header className="absolute top-1/2 w-full -translate-y-1/2 rounded-xl">
         <nav className="flex size-full items-center justify-between p-4">
           <div className="flex items-center gap-7">
-            <img src="/img/Madhurima-Favicon.png" alt="logo" className="w-10" />
+            <Image src="/img/Madhurima-Favicon.png" alt="logo" width={40} height={40} className="w-10" />
 
             <Button
               id="product-button"
@@ -85,7 +86,7 @@ const Navbar = () => {
               {navItems.map((item) => (
                 <a
                   key={item}
-                  href={`${item.toLowerCase()}`}
+                  href={`/${item.toLowerCase().replace(/\s+/g, '-')}`}
                   className="nav-hover-btn"
                 >
                   {item}
